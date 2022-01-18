@@ -1,1 +1,1 @@
-# mouvie-seat-booking
+# movie-seat-booking
