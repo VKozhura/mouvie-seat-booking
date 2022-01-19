@@ -4,7 +4,7 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-const ticketPrice = parseInt(movieSelect.value);
+let ticketPrice = parseInt(movieSelect.value);
 
 //update total and count
 function updateSelectedCount() {
@@ -19,4 +19,9 @@ container.addEventListener("click", (e) => {
 		e.target.classList.toggle("selected");
 		updateSelectedCount();
 	}
+});
+
+movieSelect.addEventListener("change", (e) => {
+	ticketPrice = parseInt(e.target.value);
+	updateSelectedCount();
 });
